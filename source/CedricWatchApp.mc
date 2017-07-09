@@ -1,8 +1,3 @@
-//
-// Copyright 2016-2017 by Garmin Ltd. or its subsidiaries.
-// Subject to Garmin SDK License Agreement and Wearables
-// Application Developer Agreement.
-//
 
 using Toybox.Application;
 using Toybox.Time;
@@ -23,11 +18,11 @@ class CedricWatchApp extends Application.AppBase
 
     // This method runs each time the main application starts.
     function getInitialView() {
-        //if( Toybox.WatchUi has :WatchFaceDelegate ) {
-        //    return [new AnalogView(), new AnalogDelegate()];
-        //} else {
+        if( Toybox.WatchUi has :WatchFaceDelegate ) {
+            return [new AnalogView(), new AnalogDelegate()];
+        } else {
             return [new CedricWatchView()];
-        //}
+        }
     }
 
 }
