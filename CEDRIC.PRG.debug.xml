@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<pcToLineNum>
+<entry filename="source/CedricWatchApp.mc" lineNum="9" pc="268435456" symbol="initialize"/>
+<entry filename="source/CedricWatchApp.mc" lineNum="10" pc="268435460" symbol="initialize"/>
+<entry filename="source/CedricWatchApp.mc" lineNum="13" pc="268435479" symbol="onStart"/>
+<entry filename="source/CedricWatchApp.mc" lineNum="16" pc="268435484" symbol="onStop"/>
+<entry filename="source/CedricWatchApp.mc" lineNum="20" pc="268435489" symbol="getInitialView"/>
+<entry filename="source/CedricWatchApp.mc" lineNum="21" pc="268435493" symbol="getInitialView"/>
+<entry filename="source/CedricWatchApp.mc" lineNum="22" pc="268435516" symbol="getInitialView"/>
+<entry filename="source/CedricWatchApp.mc" lineNum="24" pc="268435586" symbol="getInitialView"/>
+<entry filename="source/CedricWatchView.mc" lineNum="26" pc="268435624" symbol="initialize"/>
+<entry filename="source/CedricWatchView.mc" lineNum="27" pc="268435628" symbol="initialize"/>
+<entry filename="source/CedricWatchView.mc" lineNum="27" pc="268435638" symbol="initialize"/>
+<entry filename="source/CedricWatchView.mc" lineNum="27" pc="268435648" symbol="initialize"/>
+<entry filename="source/CedricWatchView.mc" lineNum="27" pc="268435658" symbol="initialize"/>
+<entry filename="source/CedricWatchView.mc" lineNum="107" pc="268435669" symbol="initialize"/>
+<entry filename="source/CedricWatchView.mc" lineNum="108" pc="268435673" symbol="initialize"/>
+<entry filename="source/CedricWatchView.mc" lineNum="109" pc="268435691" symbol="initialize"/>
+<entry filename="source/CedricWatchView.mc" lineNum="110" pc="268435720" symbol="initialize"/>
+<entry filename="source/CedricWatchView.mc" lineNum="111" pc="268435730" symbol="initialize"/>
+<entry filename="source/CedricWatchView.mc" lineNum="116" pc="268435765" symbol="onLayout"/>
+<entry filename="source/CedricWatchView.mc" lineNum="119" pc="268435769" symbol="onLayout"/>
+<entry filename="source/CedricWatchView.mc" lineNum="123" pc="268435792" symbol="onLayout"/>
+<entry filename="source/CedricWatchView.mc" lineNum="133" pc="268435935" symbol="onLayout"/>
+<entry filename="source/CedricWatchView.mc" lineNum="138" pc="268435944" symbol="onLayout"/>
+<entry filename="source/CedricWatchView.mc" lineNum="142" pc="268436009" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="144" pc="268436013" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="145" pc="268436013" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="146" pc="268436013" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="147" pc="268436026" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="148" pc="268436043" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="150" pc="268436046" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="151" pc="268436063" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="155" pc="268436080" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="157" pc="268436090" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="163" pc="268436103" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="165" pc="268436125" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="168" pc="268436129" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="169" pc="268436142" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="172" pc="268436155" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="173" pc="268436183" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="182" pc="268436227" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="184" pc="268436241" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="186" pc="268436257" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="188" pc="268436287" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="195" pc="268436309" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="197" pc="268436323" symbol="onUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="201" pc="268436334" symbol="drawDate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="202" pc="268436338" symbol="drawDate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="203" pc="268436382" symbol="drawDate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="205" pc="268436458" symbol="drawDate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="206" pc="268436490" symbol="drawDate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="210" pc="268436539" symbol="drawState"/>
+<entry filename="source/CedricWatchView.mc" lineNum="212" pc="268436543" symbol="drawState"/>
+<entry filename="source/CedricWatchView.mc" lineNum="213" pc="268436548" symbol="drawState"/>
+<entry filename="source/CedricWatchView.mc" lineNum="215" pc="268436631" symbol="drawState"/>
+<entry filename="source/CedricWatchView.mc" lineNum="216" pc="268436642" symbol="drawState"/>
+<entry filename="source/CedricWatchView.mc" lineNum="221" pc="268436726" symbol="drawBattery"/>
+<entry filename="source/CedricWatchView.mc" lineNum="223" pc="268436730" symbol="drawBattery"/>
+<entry filename="source/CedricWatchView.mc" lineNum="225" pc="268436764" symbol="drawBattery"/>
+<entry filename="source/CedricWatchView.mc" lineNum="227" pc="268436882" symbol="drawBattery"/>
+<entry filename="source/CedricWatchView.mc" lineNum="230" pc="268436917" symbol="drawBattery"/>
+<entry filename="source/CedricWatchView.mc" lineNum="232" pc="268436971" symbol="drawBattery"/>
+<entry filename="source/CedricWatchView.mc" lineNum="237" pc="268437022" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="238" pc="268437026" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="239" pc="268437057" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="241" pc="268437073" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="242" pc="268437103" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="244" pc="268437147" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="246" pc="268437223" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="247" pc="268437253" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="249" pc="268437297" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="252" pc="268437373" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="253" pc="268437404" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="255" pc="268437420" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="256" pc="268437450" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="258" pc="268437494" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="260" pc="268437570" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="261" pc="268437600" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="263" pc="268437644" symbol="drawTime"/>
+<entry filename="source/CedricWatchView.mc" lineNum="268" pc="268437721" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="270" pc="268437725" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="271" pc="268437741" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="272" pc="268437755" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="273" pc="268437779" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="274" pc="268437792" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="274" pc="268437806" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="275" pc="268437812" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="277" pc="268437893" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="278" pc="268437903" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="279" pc="268437927" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="280" pc="268438013" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="282" pc="268438033" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="284" pc="268438036" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="285" pc="268438061" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="286" pc="268438086" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="287" pc="268438114" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="288" pc="268438142" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="289" pc="268438156" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="291" pc="268438179" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="293" pc="268438199" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="295" pc="268438202" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="296" pc="268438216" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="297" pc="268438230" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="298" pc="268438254" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="300" pc="268438334" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="304" pc="268438351" symbol="drawShape"/>
+<entry filename="source/CedricWatchView.mc" lineNum="312" pc="268438368" symbol="onPartialUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="314" pc="268438372" symbol="onPartialUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="315" pc="268438384" symbol="onPartialUpdate"/>
+<entry filename="source/CedricWatchView.mc" lineNum="329" pc="268438402" symbol="drawBackground"/>
+<entry filename="source/CedricWatchView.mc" lineNum="331" pc="268438406" symbol="drawBackground"/>
+<entry filename="source/CedricWatchView.mc" lineNum="332" pc="268438419" symbol="drawBackground"/>
+<entry filename="source/CedricWatchView.mc" lineNum="339" pc="268438453" symbol="onEnterSleep"/>
+<entry filename="source/CedricWatchView.mc" lineNum="340" pc="268438457" symbol="onEnterSleep"/>
+<entry filename="source/CedricWatchView.mc" lineNum="341" pc="268438467" symbol="onEnterSleep"/>
+<entry filename="source/CedricWatchView.mc" lineNum="346" pc="268438484" symbol="onExitSleep"/>
+<entry filename="source/CedricWatchView.mc" lineNum="347" pc="268438488" symbol="onExitSleep"/>
+<entry filename="source/CedricWatchView.mc" lineNum="353" pc="268438499" symbol="initialize"/>
+<entry filename="source/CedricWatchView.mc" lineNum="354" pc="268438503" symbol="initialize"/>
+<entry filename="source/CedricWatchView.mc" lineNum="358" pc="268438522" symbol="onPowerBudgetExceeded"/>
+<entry filename="source/CedricWatchView.mc" lineNum="359" pc="268438526" symbol="onPowerBudgetExceeded"/>
+<entry filename="source/CedricWatchView.mc" lineNum="360" pc="268438556" symbol="onPowerBudgetExceeded"/>
+<entry filename="source/CedricWatchView.mc" lineNum="361" pc="268438586" symbol="onPowerBudgetExceeded"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8388644" module="true" symbol="System"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="33" method="true" symbol="drawBattery"/>
+<entry field="true" id="24" symbol="bluetooth"/>
+<entry id="8390097" method="true" symbol="onPartialUpdate"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry id="8388645" module="true" symbol="Time"/>
+<entry id="31" method="true" symbol="drawDate"/>
+<entry field="true" id="18" symbol="offscreenBuffer"/>
+<entry field="true" id="23" symbol="mail"/>
+<entry id="40" symbol="box"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry field="true" id="38" symbol="hide"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry field="true" id="25" symbol="numbers"/>
+<entry id="8389377" method="true" symbol="onExitSleep"/>
+<entry id="8390098" method="true" symbol="onPowerBudgetExceeded"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry id="35" method="true" symbol="drawShape"/>
+<entry id="11" object="true" symbol="CedricWatchView"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry id="8388924" module="true" symbol="Gregorian"/>
+<entry id="8390101" object="true" symbol="BufferedBitmap"/>
+<entry id="41" symbol="line"/>
+<entry id="8390095" object="true" symbol="WatchFaceDelegate"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry field="true" id="16" symbol="AppName"/>
+<entry id="12" object="true" symbol="AnalogDelegate"/>
+<entry field="true" id="22" symbol="batterie"/>
+<entry id="36" method="true" symbol="drawBackground"/>
+<entry id="8388641" module="true" symbol="Math"/>
+<entry field="true" id="15" symbol="LauncherIcon"/>
+<entry id="34" method="true" symbol="drawTime"/>
+<entry id="8389660" symbol="palette"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry field="true" id="37" symbol="fill"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry id="8389723" object="true" symbol="Shape"/>
+<entry id="9" object="true" symbol="CedricWatchApp"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry field="true" id="8389670" symbol="screenShape"/>
+<entry id="8389376" method="true" symbol="onEnterSleep"/>
+<entry field="true" id="29" symbol="Mcolor"/>
+<entry field="true" id="19" symbol="screenCenterPoint"/>
+<entry field="true" id="17" symbol="isAwake"/>
+<entry field="true" id="8389846" symbol="type"/>
+<entry field="true" id="8389067" symbol="height"/>
+<entry id="42" symbol="polygon"/>
+<entry field="true" id="28" symbol="Hcolor"/>
+<entry id="14" module="true" symbol="Layouts"/>
+<entry field="true" id="21" symbol="segments"/>
+<entry field="true" id="8389764" symbol="points"/>
+<entry id="32" method="true" symbol="drawState"/>
+<entry field="true" id="20" symbol="fullScreenRefresh"/>
+<entry id="8390088" module="true" object="true" symbol="JsonData"/>
+<entry field="true" id="27" symbol="lineW"/>
+<entry field="true" id="8389066" symbol="width"/>
+<entry field="true" id="30" symbol="BackColor"/>
+<entry id="13" module="true" symbol="Menus"/>
+<entry field="true" id="10" symbol="partialUpdatesAllowed"/>
+<entry id="8388772" module="true" object="true" symbol="Fonts"/>
+<entry id="8388635" module="true" symbol="Application"/>
+<entry field="true" id="26" symbol="dotR"/>
+</symbolTable>
+<localVars>
+<entry endPc="268435484" name="state" stackId="1" startPc="268435479"/>
+<entry endPc="268435489" name="state" stackId="1" startPc="268435484"/>
+<entry endPc="268435669" name="hide" stackId="4" startPc="268435624"/>
+<entry endPc="268435669" name="points" stackId="2" startPc="268435624"/>
+<entry endPc="268435669" name="type" stackId="1" startPc="268435624"/>
+<entry endPc="268435669" name="fill" stackId="3" startPc="268435624"/>
+<entry endPc="268436009" name="dc" stackId="1" startPc="268435765"/>
+<entry endPc="268436333" name="height" stackId="3" startPc="268436013"/>
+<entry endPc="268436333" name="myStats" stackId="8" startPc="268436013"/>
+<entry endPc="268436333" name="mySettings" stackId="7" startPc="268436013"/>
+<entry endPc="268436333" name="targetDc" stackId="6" startPc="268436013"/>
+<entry endPc="268436333" name="width" stackId="2" startPc="268436013"/>
+<entry endPc="268436333" name="clockTime" stackId="5" startPc="268436013"/>
+<entry endPc="268436333" name="screenWidth" stackId="4" startPc="268436013"/>
+<entry endPc="268436334" name="dc" stackId="1" startPc="268436009"/>
+<entry endPc="268436538" name="dateStr" stackId="3" startPc="268436338"/>
+<entry endPc="268436538" name="info" stackId="2" startPc="268436338"/>
+<entry endPc="268436539" name="dc" stackId="1" startPc="268436334"/>
+<entry endPc="268436726" name="dc" stackId="1" startPc="268436539"/>
+<entry endPc="268436726" name="notifCount" stackId="3" startPc="268436539"/>
+<entry endPc="268436726" name="btStatus" stackId="2" startPc="268436539"/>
+<entry endPc="268437021" name="batP" stackId="4" startPc="268436730"/>
+<entry endPc="268437021" name="o" stackId="3" startPc="268436730"/>
+<entry endPc="268437021" name="bl" stackId="5" startPc="268436730"/>
+<entry endPc="268437022" name="batteryLevel" stackId="2" startPc="268436726"/>
+<entry endPc="268437022" name="dc" stackId="1" startPc="268436726"/>
+<entry endPc="268437147" name="i" stackId="5" startPc="268437103"/>
+<entry endPc="268437297" name="i" stackId="6" startPc="268437253"/>
+<entry endPc="268437494" name="i" stackId="9" startPc="268437450"/>
+<entry endPc="268437644" name="i" stackId="10" startPc="268437600"/>
+<entry endPc="268437720" name="M2" stackId="8" startPc="268437026"/>
+<entry endPc="268437720" name="M1" stackId="7" startPc="268437026"/>
+<entry endPc="268437720" name="H2" stackId="4" startPc="268437026"/>
+<entry endPc="268437720" name="H1" stackId="3" startPc="268437026"/>
+<entry endPc="268437721" name="dc" stackId="1" startPc="268437022"/>
+<entry endPc="268437721" name="clockTime" stackId="2" startPc="268437022"/>
+<entry endPc="268438033" name="n" stackId="11" startPc="268437927"/>
+<entry endPc="268438334" name="n" stackId="17" startPc="268438254"/>
+<entry endPc="268438348" name="poly" stackId="16" startPc="268438216"/>
+<entry endPc="268438354" name="w" stackId="14" startPc="268437823"/>
+<entry endPc="268438354" name="py" stackId="13" startPc="268437823"/>
+<entry endPc="268438354" name="px" stackId="12" startPc="268437823"/>
+<entry endPc="268438354" name="h" stackId="15" startPc="268437823"/>
+<entry endPc="268438354" name="p1" stackId="10" startPc="268437823"/>
+<entry endPc="268438354" name="points" stackId="9" startPc="268437779"/>
+<entry endPc="268438367" name="i" stackId="8" startPc="268437779"/>
+<entry endPc="268438368" name="shapes" stackId="2" startPc="268437721"/>
+<entry endPc="268438368" name="dc" stackId="1" startPc="268437721"/>
+<entry endPc="268438368" name="backColor" stackId="5" startPc="268437721"/>
+<entry endPc="268438368" name="options" stackId="7" startPc="268437721"/>
+<entry endPc="268438368" name="frontColor" stackId="4" startPc="268437721"/>
+<entry endPc="268438368" name="penWidth" stackId="6" startPc="268437721"/>
+<entry endPc="268438368" name="coord" stackId="3" startPc="268437721"/>
+<entry endPc="268438402" name="dc" stackId="1" startPc="268438368"/>
+<entry endPc="268438453" name="dc" stackId="1" startPc="268438402"/>
+<entry endPc="268438597" name="powerInfo" stackId="1" startPc="268438522"/>
+</localVars>
+<annotations/>
+<functions>
+<functionEntry accessMode="public" name="initialize" parent="CedricWatchApp">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onStart" parent="CedricWatchApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onStop" parent="CedricWatchApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="getInitialView" parent="CedricWatchApp">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="Shape">
+<param id="type"/>
+<param id="points"/>
+<param id="fill"/>
+<param id="hide"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="CedricWatchView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onLayout" parent="CedricWatchView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onUpdate" parent="CedricWatchView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="drawDate" parent="CedricWatchView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="drawState" parent="CedricWatchView">
+<param id="dc"/>
+<param id="btStatus"/>
+<param id="notifCount"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="drawBattery" parent="CedricWatchView">
+<param id="dc"/>
+<param id="batteryLevel"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="drawTime" parent="CedricWatchView">
+<param id="dc"/>
+<param id="clockTime"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="drawShape" parent="CedricWatchView">
+<param id="dc"/>
+<param id="shapes"/>
+<param id="coord"/>
+<param id="frontColor"/>
+<param id="backColor"/>
+<param id="penWidth"/>
+<param id="options"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onPartialUpdate" parent="CedricWatchView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="drawBackground" parent="CedricWatchView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onEnterSleep" parent="CedricWatchView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onExitSleep" parent="CedricWatchView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="AnalogDelegate">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onPowerBudgetExceeded" parent="AnalogDelegate">
+<param id="powerInfo"/>
+<documentation/>
+</functionEntry>
+</functions>
+<dataEntryOffsetMappings>
+<dataEntry offset="87" parentId="" symbolId="globals" type="module"/>
+<dataEntry offset="190" parentId="globals" symbolId="CedricWatchApp" type="class"/>
+<dataEntry offset="261" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry offset="340" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry offset="379" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry offset="410" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry offset="441" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry offset="472" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry offset="503" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry offset="542" parentId="globals" symbolId="CedricWatchView" type="class"/>
+<dataEntry offset="797" parentId="globals" symbolId="Shape" type="class"/>
+<dataEntry offset="876" parentId="globals" symbolId="AnalogDelegate" type="class"/>
+</dataEntryOffsetMappings>
+</debugInfo>

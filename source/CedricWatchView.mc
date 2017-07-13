@@ -46,49 +46,61 @@ class CedricWatchView extends WatchUi.WatchFace {
 
     // Toutes ces valeurs valent pour un ecran 215x180 ou 215x215.
     // il faudra mettre à l'échelle pour des écran différents
+    // var segments = [
+    // new Shape(:polygon,[ [2,0],[24,0],[17,6],[7,6] ],true,false),
+    // new Shape(:polygon,[ [19,8],[26,2],[17,56],[11,52] ],true,false),
+    // new Shape(:polygon,[ [9,64],[16,62],[6,117],[1,111] ],true,false),
+    // new Shape(:polygon,[ [-11,113],[-1,113],[4,119],[-18,119] ],true,false),
+    // new Shape(:polygon,[ [-11,62],[-5,64],[-13,111],[-20,117] ],true,false),
+    // new Shape(:polygon,[ [0,2],[5,8],[-2,52],[-9,55] ],true,false),
+    // new Shape(:polygon,[ [-1,55],[9,55],[14,58],[9,61],[-4,61],[-8,59] ],true,false) 
+    // ];
+
     var segments = [
-    new Shape("polygon",[ [2,0],[24,0],[17,6],[7,6] ],true,false),
-    new Shape("polygon",[ [19,8],[26,2],[17,56],[11,52] ],true,false),
-    new Shape("polygon",[ [9,64],[16,62],[6,117],[1,111] ],true,false),
-    new Shape("polygon",[ [-11,113],[-1,113],[4,119],[-18,119] ],true,false),
-    new Shape("polygon",[ [-11,62],[-5,64],[-13,111],[-20,117] ],true,false),
-    new Shape("polygon",[ [0,2],[5,8],[-2,52],[-9,55] ],true,false),
-    new Shape("polygon",[ [-1,55],[9,55],[14,58],[9,61],[-4,61],[-8,59] ],true,false) 
-    ];
+new Shape(:polygon,[ [0 ,0  ],[45,0  ],[30,20 ],[15,20 ] ],true,false),
+new Shape(:polygon,[ [30,20 ],[45,0  ],[45,80 ],[30,70 ] ],true,false),
+new Shape(:polygon,[ [30,90 ],[45,80 ],[45,160],[30,140] ],true,false),
+new Shape(:polygon,[ [15,140],[30,140],[45,160],[0 ,160] ],true,false),
+new Shape(:polygon,[ [0 ,80 ],[15,90 ],[15,140],[0 ,160] ],true,false),
+new Shape(:polygon,[ [0 ,0  ],[15,20 ],[15,70 ],[0 ,80 ] ],true,false),
+new Shape(:polygon,[ [15,70 ],[30,70 ],[45,80 ],[30,90 ],[15, 90] ,[0, 80] ],true,false)
+];
+
+
 
     var batterie = [
-    new Shape("line",[ [0,2],[-15,2],[-21,38],[-36,38],[0,2] ],false,false),
-    new Shape("box",[ [6,0],[11,2] ],true,false)
-    ];
-
-    var batterieState = [
-    new Shape("polygon",[ [2,4],[14,4],[8,37],[-4,37] ],true,false)
+    new Shape(:box,[ [0,3],[12,40] ],false,false),
+    new Shape(:box,[ [4,0],[8,3] ],true,false)
     ];
 
     var mail = [
-    new Shape("box",[ [0,0],[19,12] ],false,false),
-    new Shape("line",[ [0,0],[10,7],[19,0] ],false,false)
+    new Shape(:box,[ [0,0],[12,8] ],false,false),
+    new Shape(:line,[ [0,0],[6,4],[12,0] ],false,false)
     ];
 
     var bluetooth = [
-    new Shape("line",[ [0,4],[9,13],[4,18],[4,0],[77,4],[6,13] ],false,false)
+    new Shape(:line,[ [0,4],[9,13],[4,18],[4,0],[9,4],[0,13] ],false,false)
     ];
 
     var numbers = [
-    [true,true,true,true,true,true,false],
-    [false,true,true,false,false,false,false],
-    [true,true,false,true,true,false,true],
-    [true,true,true,true,false,false,true],
-    [false,true,true,false,false,true,true],
-    [true,false,true,true,false,true,true],
-    [true,false,true,true,true,true,true],
-    [true,true,true,false,false,false,false],
-    [true,true,true,true,true,true,true],
-    [true,true,true,true,false,true,true]
+    [false,false,false,false,false,false,true],
+    [true,false,false,true,true,true,true],
+    [false,false,true,false,false,true,false],
+    [false,false,false,false,true,true,false],
+    [true,false,false,true,true,false,false],
+    [false,true,false,false,true,false,false],
+    [false,true,false,false,false,false,false],
+    [false,false,false,true,true,true,true],
+    [false,false,false,false,false,false,false],
+    [false,false,false,false,true,false,false]
     ];
 
+    var dotR=3;
+    var lineW=2;
 
-
+    var Hcolor = Graphics.COLOR_YELLOW;
+    var Mcolor = Graphics.COLOR_WHITE;
+    var BackColor = Graphics.COLOR_BLACK;
 
 
     // Initialize variables for this view
@@ -112,8 +124,9 @@ class CedricWatchView extends WatchUi.WatchFace {
                 :width=>dc.getWidth(),
                 :height=>dc.getHeight(),
                 :palette=> [
-                    Graphics.COLOR_BLACK,
-                    Graphics.COLOR_RED
+                    Mcolor,
+                    Hcolor,
+                    BackColor
                 ]
             });
         } else {
@@ -122,12 +135,12 @@ class CedricWatchView extends WatchUi.WatchFace {
 
         //curClip = null;
 
-       // screenCenterPoint = [dc.getWidth()/2, dc.getHeight()/2];
+       screenCenterPoint = [dc.getWidth()/2, dc.getHeight()/2];
     }
 
     // Handle the update event
     function onUpdate(dc) {
-
+        
         var width;
         var height;
         var screenWidth = dc.getWidth();
@@ -135,7 +148,7 @@ class CedricWatchView extends WatchUi.WatchFace {
         var targetDc = null; // pour utiliser ou pas le Dbuffer
 
         var mySettings = System.getDeviceSettings();
-        //var myStats = System.getDeviceStats(); 
+        var myStats = System.getSystemStats(); 
 
 
         // We always want to refresh the full screen when we get a regular onUpdate call.
@@ -155,29 +168,68 @@ class CedricWatchView extends WatchUi.WatchFace {
         width = targetDc.getWidth();
         height = targetDc.getHeight();
 
-        // Fill the entire background with Black.
-        targetDc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        // Dessin du BG
+        targetDc.setColor(BackColor,BackColor);
         targetDc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
+        
+       // targetDc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_DK_GRAY);
+       // targetDc.fillCircle(screenCenterPoint[0],screenCenterPoint[1], (targetDc.getWidth()/2)-11);
 
+       // targetDc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+       // targetDc.fillRectangle(0, 0, targetDc.getWidth(), 10);
+       // targetDc.fillRectangle(0,targetDc.getHeight()-10, targetDc.getWidth(), 10);
+
+        drawDate(targetDc);
 
         drawTime(targetDc,clockTime);
 
         drawState(targetDc,mySettings.phoneConnected,mySettings.notificationCount);
 
+        drawBattery(targetDc,myStats.battery);
+
+
+
+        //drawAllSeconds(targetDc);
 
         //flush Dbuffer in dc
         drawBackground(dc);
 
         fullScreenRefresh = false;
+
     }
 
+    function drawDate(dc) {
+        var info = Gregorian.info(Time.now(), Time.FORMAT_LONG);
+        var dateStr = Lang.format("$1$ $2$ $3$", [info.day_of_week, info.month, info.day]);
+
+        dc.setColor(Mcolor, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(108, 0, Graphics.FONT_XTINY, dateStr, Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+
     function drawState(dc,btStatus,notifCount){
+
         if(btStatus){
-            drawShape(dc,bluetooth,[178,110],Graphics.COLOR_RED,Graphics.COLOR_RED,3,null);
+            drawShape(dc,bluetooth,[31,57],Mcolor,Graphics.COLOR_TRANSPARENT,2,null);
         }
         if(notifCount>0){
-            drawShape(dc,mail,[177,83],Graphics.COLOR_RED,Graphics.COLOR_RED,3,null);
+            drawShape(dc,mail,[31,35],Mcolor,Graphics.COLOR_RED,2,null);
         }
+
+    }
+
+    function drawBattery(dc,batteryLevel){
+
+        var o=[30,105];
+        
+        var batP = [ [0,(batteryLevel/100)*batterie[0].points[1][1]],batterie[0].points[1] ];
+
+        var bl=new Shape(:box,batP,true,false);
+
+
+        drawShape(dc,[bl],o,Hcolor,Mcolor,2,null);
+        
+        drawShape(dc,batterie,o,Mcolor,Graphics.COLOR_TRANSPARENT,2,null);
 
     }
 
@@ -189,16 +241,13 @@ class CedricWatchView extends WatchUi.WatchFace {
         for (var i=0;i<segments.size();i++){
             segments[i].hide=numbers[H1][i];
         }
-        drawShape(dc,segments,[54,30],Graphics.COLOR_RED,Graphics.COLOR_RED,3,null);
+        drawShape(dc,segments,[13,10],Hcolor,Hcolor,3,null);
         
         for (var i=0;i<segments.size();i++){
             segments[i].hide=numbers[H2][i];
         }
-        drawShape(dc,segments,[84,30],Graphics.COLOR_RED,Graphics.COLOR_RED,3,null);
+        drawShape(dc,segments,[60,10],Hcolor,Hcolor,3,null);
         
-        dc.fillCircle(109,76,3);
-        
-        dc.fillCircle(105,103,3);
 
         var M1 = Math.floor(clockTime.min/10);
         var M2 = clockTime.min%10;
@@ -206,12 +255,12 @@ class CedricWatchView extends WatchUi.WatchFace {
         for (var i=0;i<segments.size();i++){
             segments[i].hide=numbers[M1][i];
         }
-        drawShape(dc,segments,[123,30],Graphics.COLOR_RED,Graphics.COLOR_RED,3,null);
+        drawShape(dc,segments,[110,10],Mcolor,Mcolor,3,null);
         
         for (var i=0;i<segments.size();i++){
             segments[i].hide=numbers[M2][i];
         }
-        drawShape(dc,segments,[153,30],Graphics.COLOR_RED,Graphics.COLOR_RED,3,null);
+        drawShape(dc,segments,[157,10],Mcolor,Mcolor,3,null);
         
 
     }
@@ -222,22 +271,27 @@ class CedricWatchView extends WatchUi.WatchFace {
         dc.setPenWidth(penWidth);
         for (var i=0;i<shapes.size();i++) {
             var points=shapes[i].points;
-            if(! shapes[i].hide){continue;}
+            if(shapes[i].hide){continue;}
             switch(shapes[i].type){
-            case "line":
+            case :line :
                 var p1=points[0];
                 for ( var n=1;n<points.size();n++ ) {
                     dc.drawLine(coord[0]+p1[0],coord[1]+p1[1],coord[0]+points[n][0],coord[1]+points[n][1]);
+                    p1=points[n];
                 }
                 break;
-            case "box":
+            case :box :
+                var px=coord[0]+points[0][0];
+                var py=coord[1]+points[0][1];
+                var w =coord[0]+points[1][0]-px;
+                var h =coord[1]+points[1][1]-py;
                 if(shapes[i].fill){
-                    dc.fillRectangle(coord[0]+points[0][0],coord[1]+points[0][1],coord[0]+points[1][0],coord[1]+points[1][1]);
+                    dc.fillRectangle(px,py,w,h);
                 }else{
-                    dc.drawRectangle(coord[0]+points[0][0],coord[1]+points[0][1],coord[0]+points[1][0],coord[1]+points[1][1]);
+                    dc.drawRectangle(px,py,w,h);
                 }
                 break;
-            case "polygon":
+            case :polygon :
                 if(shapes[i].fill){
                     var poly=new[points.size()];
                     for ( var n=0;n<points.size();n++ ) {
@@ -251,6 +305,21 @@ class CedricWatchView extends WatchUi.WatchFace {
             }
         }
 
+
+    }
+
+
+    function onPartialUpdate(dc) {
+
+        if(!fullScreenRefresh) {
+            drawBackground(dc);
+        }
+
+        // Update the cliping rectangle to the new location of the second hand.
+        //curClip = getBoundingBox( secondHandPoints );
+        //var bboxWidth = curClip[1][0] - curClip[0][0] + 1;
+        //var bboxHeight = curClip[1][1] - curClip[0][1] + 1;
+        //dc.setClip(curClip[0][0], curClip[0][1], bboxWidth, bboxHeight);
 
     }
 
@@ -276,5 +345,19 @@ class CedricWatchView extends WatchUi.WatchFace {
     // Set the isAwake flag to let onUpdate know it should render the second hand.
     function onExitSleep() {
         isAwake = true;
+    }
+}
+
+class AnalogDelegate extends WatchUi.WatchFaceDelegate {
+
+    function initialize(){
+        WatchFaceDelegate.initialize();
+    }
+    // permet de limiter l'usage du rafraichissement par seconde
+    // => surutilisation , alors on block le rafraichissement
+    function onPowerBudgetExceeded(powerInfo) {
+        System.println( "Average execution time: " + powerInfo.executionTimeAverage );
+        System.println( "Allowed execution time: " + powerInfo.executionTimeLimit );
+        partialUpdatesAllowed = false;
     }
 }
