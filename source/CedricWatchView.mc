@@ -15,6 +15,9 @@ using Toybox.ActivityMonitor as Act;
 
 
 var partialUpdatesAllowed = false;
+var firstPartial=0;
+var frontColor=Graphics.COLOR_RED;
+
 
 
 class Shape {
@@ -57,14 +60,14 @@ class CedricWatchView extends WatchUi.WatchFace {
     // ];
 
     var segments = [
-new Shape(:polygon,[ [0 ,0  ],[45,0  ],[30,20 ],[15,20 ] ],true,false),
-new Shape(:polygon,[ [30,20 ],[45,0  ],[45,80 ],[30,70 ] ],true,false),
-new Shape(:polygon,[ [30,90 ],[45,80 ],[45,160],[30,140] ],true,false),
-new Shape(:polygon,[ [15,140],[30,140],[45,160],[0 ,160] ],true,false),
-new Shape(:polygon,[ [0 ,80 ],[15,90 ],[15,140],[0 ,160] ],true,false),
-new Shape(:polygon,[ [0 ,0  ],[15,20 ],[15,70 ],[0 ,80 ] ],true,false),
-new Shape(:polygon,[ [15,70 ],[30,70 ],[45,80 ],[30,90 ],[15, 90] ,[0, 80] ],true,false)
-];
+    new Shape(:polygon,[ [0 ,0  ],[45,0  ],[30,20 ],[15,20 ] ],true,false),
+    new Shape(:polygon,[ [30,20 ],[45,0  ],[45,80 ],[30,70 ] ],true,false),
+    new Shape(:polygon,[ [30,90 ],[45,80 ],[45,160],[30,140] ],true,false),
+    new Shape(:polygon,[ [15,140],[30,140],[45,160],[0 ,160] ],true,false),
+    new Shape(:polygon,[ [0 ,80 ],[15,90 ],[15,140],[0 ,160] ],true,false),
+    new Shape(:polygon,[ [0 ,0  ],[15,20 ],[15,70 ],[0 ,80 ] ],true,false),
+    new Shape(:polygon,[ [15,70 ],[30,70 ],[45,80 ],[30,90 ],[15, 90] ,[0, 80] ],true,false)
+    ];
 
 
 
@@ -97,11 +100,9 @@ new Shape(:polygon,[ [15,70 ],[30,70 ],[45,80 ],[30,90 ],[15, 90] ,[0, 80] ],tru
 
     var dotR=3;
     var lineW=2;
-
     var Hcolor = Graphics.COLOR_YELLOW;
     var Mcolor = Graphics.COLOR_WHITE;
     var BackColor = Graphics.COLOR_BLACK;
-
 
     // Initialize variables for this view
     function initialize() {
@@ -109,6 +110,7 @@ new Shape(:polygon,[ [15,70 ],[30,70 ],[45,80 ],[30,90 ],[15, 90] ,[0, 80] ],tru
         screenShape = System.getDeviceSettings().screenShape;
         fullScreenRefresh = true;
         partialUpdatesAllowed = ( Toybox.WatchUi.WatchFace has :onPartialUpdate );
+        System.println(partialUpdatesAllowed);
     }
 
 
@@ -140,7 +142,7 @@ new Shape(:polygon,[ [15,70 ],[30,70 ],[45,80 ],[30,90 ],[15, 90] ,[0, 80] ],tru
 
     // Handle the update event
     function onUpdate(dc) {
-        
+
         var width;
         var height;
         var screenWidth = dc.getWidth();
@@ -150,13 +152,9 @@ new Shape(:polygon,[ [15,70 ],[30,70 ],[45,80 ],[30,90 ],[15, 90] ,[0, 80] ],tru
         var mySettings = System.getDeviceSettings();
         var myStats = System.getSystemStats(); 
 
-
-        // We always want to refresh the full screen when we get a regular onUpdate call.
-        fullScreenRefresh = true;
-
         if(null != offscreenBuffer) {
-            //dc.clearClip();
-            //curClip = null;
+            dc.clearClip();
+            curClip = null;
 
             // If we have an offscreen buffer that we are using to draw the background,
             // set the draw context of that buffer as our target.
@@ -171,13 +169,6 @@ new Shape(:polygon,[ [15,70 ],[30,70 ],[45,80 ],[30,90 ],[15, 90] ,[0, 80] ],tru
         // Dessin du BG
         targetDc.setColor(BackColor,BackColor);
         targetDc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
-        
-       // targetDc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_DK_GRAY);
-       // targetDc.fillCircle(screenCenterPoint[0],screenCenterPoint[1], (targetDc.getWidth()/2)-11);
-
-       // targetDc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-       // targetDc.fillRectangle(0, 0, targetDc.getWidth(), 10);
-       // targetDc.fillRectangle(0,targetDc.getHeight()-10, targetDc.getWidth(), 10);
 
         drawDate(targetDc);
 
@@ -186,10 +177,6 @@ new Shape(:polygon,[ [15,70 ],[30,70 ],[45,80 ],[30,90 ],[15, 90] ,[0, 80] ],tru
         drawState(targetDc,mySettings.phoneConnected,mySettings.notificationCount);
 
         drawBattery(targetDc,myStats.battery);
-
-
-
-        //drawAllSeconds(targetDc);
 
         //flush Dbuffer in dc
         drawBackground(dc);
@@ -215,8 +202,8 @@ new Shape(:polygon,[ [15,70 ],[30,70 ],[45,80 ],[30,90 ],[15, 90] ,[0, 80] ],tru
         if(notifCount>0){
             drawShape(dc,mail,[31,35],Mcolor,Graphics.COLOR_RED,2,null);
         }
-
     }
+
 
     function drawBattery(dc,batteryLevel){
 
@@ -241,13 +228,14 @@ new Shape(:polygon,[ [15,70 ],[30,70 ],[45,80 ],[30,90 ],[15, 90] ,[0, 80] ],tru
         for (var i=0;i<segments.size();i++){
             segments[i].hide=numbers[H1][i];
         }
+
         drawShape(dc,segments,[13,10],Hcolor,Hcolor,3,null);
         
         for (var i=0;i<segments.size();i++){
             segments[i].hide=numbers[H2][i];
         }
+
         drawShape(dc,segments,[60,10],Hcolor,Hcolor,3,null);
-        
 
         var M1 = Math.floor(clockTime.min/10);
         var M2 = clockTime.min%10;
@@ -255,13 +243,14 @@ new Shape(:polygon,[ [15,70 ],[30,70 ],[45,80 ],[30,90 ],[15, 90] ,[0, 80] ],tru
         for (var i=0;i<segments.size();i++){
             segments[i].hide=numbers[M1][i];
         }
+
         drawShape(dc,segments,[110,10],Mcolor,Mcolor,3,null);
         
         for (var i=0;i<segments.size();i++){
             segments[i].hide=numbers[M2][i];
         }
-        drawShape(dc,segments,[157,10],Mcolor,Mcolor,3,null);
-        
+
+        drawShape(dc,segments,[157,10],Mcolor,Mcolor,3,null);        
 
     }
 
@@ -308,6 +297,27 @@ new Shape(:polygon,[ [15,70 ],[30,70 ],[45,80 ],[30,90 ],[15, 90] ,[0, 80] ],tru
 
     }
 
+    function drawAllSeconds(dc,toS){
+
+        dc.setColor(MColor, Graphics.COLOR_TRANSPARENT);
+        
+        for (var s=0;s<toS;s++ ) {
+            drawSecondDot(dc,s);
+        }
+
+    }
+
+    function drawSecondDot(dc,s){
+
+        var angle = s / 60.0 * Math.PI * 2.016666667;
+        var cos = Math.cos(angle);
+        var sin = Math.sin(angle);
+        var x = screenCenterPoint[0]+d*sin;
+        var y = screenCenterPoint[1]-d*cos;
+        y=(y<4)?4:y;
+        var max=dc.getHeight()-4;
+        y=(y>max)?max:y;
+
 
     function onPartialUpdate(dc) {
 
@@ -315,15 +325,7 @@ new Shape(:polygon,[ [15,70 ],[30,70 ],[45,80 ],[30,90 ],[15, 90] ,[0, 80] ],tru
             drawBackground(dc);
         }
 
-        // Update the cliping rectangle to the new location of the second hand.
-        //curClip = getBoundingBox( secondHandPoints );
-        //var bboxWidth = curClip[1][0] - curClip[0][0] + 1;
-        //var bboxHeight = curClip[1][1] - curClip[0][1] + 1;
-        //dc.setClip(curClip[0][0], curClip[0][1], bboxWidth, bboxHeight);
-
     }
-
-
 
     // bouble buffer
     function drawBackground(dc) {
